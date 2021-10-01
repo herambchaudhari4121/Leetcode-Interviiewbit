@@ -7,6 +7,7 @@ void func(vector<int>a, vector<vector<int>> &v, int t, int i, vector<int> p){
     else if(t<0 || i==a.size()){
         return;
     }
+    
 
     for(int j=i; j<a.size(); j++){
         if(j!=i && a[j]==a[j-1]){
