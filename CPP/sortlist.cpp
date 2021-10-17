@@ -56,8 +56,7 @@ ListNode* middle(ListNode* head ) {
 void MergeSort(ListNode** headRef) 
 { 
     ListNode* head = *headRef; 
-    ListNode* a; 
-    ListNode* b; 
+    ListNode* a, b;
   
     /* Base case -- length 0 or 1 */
     if ((head == NULL) || (head->next == NULL)) { 
