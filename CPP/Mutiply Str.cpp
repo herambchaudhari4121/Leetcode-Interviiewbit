@@ -27,7 +27,7 @@
 string Solution::multiply(string A, string B) {
     reverse(A.begin(), A.end());
     reverse(B.begin(), B.end());
-    int m=A.size()+B.size();
+    long m=A.size()+B.size();
     string s="";
     while(m--)
     {
@@ -36,8 +36,8 @@ string Solution::multiply(string A, string B) {
     int t=0;
     for(int i=0;i<B.size();i++)
     {
-        int c=0, x=0;
-        int k=t;
+        long c=0, x=0;
+        long k=t;
         for(int j=0;j<A.size();j++)
         {
             int p=(B[i]-'0')*(A[j]-'0')+c;
