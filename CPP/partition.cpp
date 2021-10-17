@@ -1,4 +1,4 @@
-int Solution::solve(int A, vector<int> &B) {
+long Solution::solve(int A, vector<int> &B) {
     
     vector<int> v(B.size(),0);
     int s=0;
