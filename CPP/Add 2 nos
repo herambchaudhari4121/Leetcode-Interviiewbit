@@ -1,0 +1,120 @@
+class Solution {
+public:
+    Node* cloneGraph(Node* node) {
+        if (!node) {
+            return NULL;
+        }
+        Node* copy = new Node(node -> val, {});
+        copies[node] = copy;
+        queue<Node*> todo;
+        todo.push(node);
+        while (!todo.empty()) {
+            Node* cur = todo.front();
+            todo.pop();
+            for (Node* neighbor : cur -> neighbors) {
+                if (copies.find(neighbor) == copies.end()) {
+                    copies[neighbor] = new Node(neighbor -> val, {});
+                    todo.push(neighbor);
+                }
+                copies[cur] -> neighbors.push_back(copies[neighbor]);
+            }
+        }
+        return copy;
+    }
+private:
+    unordered_map<Node*, Node*> copies;
+};
+
+
+
+// /**
+//  * Definition for singly-linked list.
+//  * struct ListNode {
+//  *     int val;
+//  *     ListNode *next;
+//  *     ListNode(int x) : val(x), next(NULL) {}
+//  * };
+//  */
+//  ListNode* reverseList(ListNode* head, int &a) {
+        
+//         ListNode *p=head;
+//         if(p==NULL)
+//             return NULL;
+//         if(p->next==NULL)
+//             return head;
+        
+//         ListNode *x=head, *y;
+//         x=x->next;
+//      a++;
+//         y=p;
+//         p->next=NULL;
+//         while(1)
+//         {
+//             if(x->next==NULL)
+//             {
+//                 a++;
+//                 p=x;
+//                 p->next=y;
+//                 y=p;
+//                 break;
+//             }
+//             a++;
+//             p=x;
+//             x=x->next;
+//             p->next=y;
+//             y=p;
+    
+            
+//         }
+//         head=y;
+//         return head;
+//     }
+// class Solution {
+// public:
+//     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+//         if(l1==NULL && l2==NULL)
+//             return NULL;
+//         if(l1==NULL)
+//             return l2;
+//         else if(l2==NULL) return l1;
+//         ListNode *q, *w, *m=q ,*x;
+//         int a=0, b=0;
+//         q=reverseList( l1, a );
+//         w=reverseList( l2, b );
+//         if(a<b)
+//         {
+//             x=q;
+//             q=w;
+//             w=x;
+//         }
+//         int c=0;
+//         // return w;
+//         m=q;
+
+//         while(1)
+//         {
+//             int g=c;
+//             c=(c+q->val+w->val)/10;
+
+//             q->val=(g+q->val+w->val)%10;
+//             if(q->next==NULL)
+//                 break;
+//             q=q->next;
+//             if(w->next==NULL)
+//             {
+//                 w->val=0;
+//             }
+//             else
+//             w=w->next;
+//         }
+//         if(c!=0)
+//         {
+//             ListNode *net = new ListNode();
+//             net->val=c;
+//             net->next=NULL;
+//             q->next=net;
+//         }
+//         m=reverseList( m, a );
+//         return m;
+//     }
+// };
