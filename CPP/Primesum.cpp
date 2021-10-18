@@ -13,7 +13,9 @@ void func(vector<int>&v, int A)
     for(int i=2;i<=A;i++)
     {
         if(p[i]==true)
-        v.push_back(i);
+        {
+            v.push_back(i);
+        }
     }
 }
 
