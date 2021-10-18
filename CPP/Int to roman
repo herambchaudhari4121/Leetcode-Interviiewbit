@@ -1,0 +1,104 @@
+class Solution {
+public:
+    string intToRoman(int num) 
+    {
+        string res;
+        string sym[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        int val[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        
+        for(int i=0; num != 0; i++)
+        {
+            while(num >= val[i])
+            {
+                num -= val[i];
+                res += sym[i];
+            }
+        }
+        
+        return res;
+    }
+};
+// class Solution {
+// public:
+//     string intToRoman(int n) {
+     
+//         string b="";
+//         int p;
+//         p=n;
+      
+//             p=p/1000;
+//         n=n%1000;
+//             b+=string(p,'M');
+        
+        
+//         p=n;
+//         p=p/100;
+//         n=n%100;
+//         if(p==9)
+//         {
+//             b+="CM";
+//         }
+//         else if(p>=5)
+//         {
+//             b+="D";
+//             b+=string(p-5,'C');
+//         }
+//         else if(p==4)
+//         {
+//             b+="CD";
+//         }
+//         else
+//         {
+//             b+=string(p,'C');
+//         }
+        
+        
+//       p=n;
+//             p=p/10;
+//         n=n%10;
+//         if(p==9)
+//         {
+//             b+="XC";
+//         }
+//         else if(p>=5)
+//         {
+//             b+="L";
+//             b+=string(p-5,'X');
+//         }
+//         else if(p==4)
+//         {
+//             b+="XL";
+//         }
+//         else
+//         {
+//             b+=string(p,'X');
+//         }
+        
+        
+//         p=n;
+//         p=p/1;
+//         n=n%10;
+        
+//         if(p==9)
+//         {
+//             b+="IX";
+//         }
+//         else if(p>=5)
+//         {
+//             b+="V";
+//             b+=string(p-5,'I');
+//         }
+//         else if(p==4)
+//         {
+           
+//             b+="IV";
+   
+//         }
+//         else
+//         {
+//             b+=string(p,'I');
+//         }
+        
+//         return b;
+//     }
+// };
