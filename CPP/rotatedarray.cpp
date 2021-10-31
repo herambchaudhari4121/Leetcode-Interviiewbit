@@ -1,3 +1,4 @@
+// Rotate the array, change the indexes, use linked list
 void bs(int l, int r, vector<int> A, int &f, int B)
 {
     while(l<=r)
