@@ -1,6 +1,6 @@
 vector<string> Solution::fizzBuzz(int A) {
     vector<string> v(A,"");
-    
+    //Drafting it
     long long x=1;
     for(long long i=0;i<A;i++)
     {
