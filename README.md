@@ -1,3 +1,6 @@
-# Leetcode-Interviewbit
+### Leetcode-Interviewbit
 
 Coding!
+ 
+# Which one should I prefer, Interviewbit or leetcode?
+From my point of view, It totally depends on you and how much time you have. If you are preparing for interviews and you don’t have much time then you should for Interviewbit. Interviews bit have a smaller set of problems. For me, it took around 16 days to solve almost each and every question on Interviewbit. If Leetcode problems considered important questions then Interviewbit problems will be very important problems. UI of the Interviewbit looks cool whereas Leetcode UI is simple and stable. If you like the game like an environment then you should go for Interviewbit with there hint and a time-based point system encourages you to solve the questions quickly which is expected in the Interview also. If you go to leetcode there will be a discussion tab for every question where you can find quite intriguing approaches to the same problem with their explanation also. The discussion section of the leetcode is quite good. Interview questions and experiences also help to understand the interview process better. Two contests per week are also there in Leetcode. The Community of Leetcode is way better than the InterviewBit one. Most importantly the Compiler of the interviewbit sometimes sucks.
