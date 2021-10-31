@@ -1,4 +1,6 @@
-string Solution::multiply(string A, string B) {
+//  C=A*B
+string Solution::multiply(string A, string B) 
+{
     reverse(A.begin(), A.end());
     reverse(B.begin(), B.end());
     long m=A.size()+B.size();
