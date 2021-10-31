@@ -1,3 +1,4 @@
+// Plindrom: What reads ahead reads back
 int Solution::isPalindrome(string A) {
     int i=0, j=A.size()-1;
     while(i<=j)
